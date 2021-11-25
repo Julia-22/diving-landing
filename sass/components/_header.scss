@@ -1,0 +1,91 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 15px;
+  @media screen and (min-width: 768px){
+    padding: 0 40px;
+  }
+  @media screen and (min-width:1200px){
+    width: 1120px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .logo{
+    font-size: 24px;
+  }
+}
+
+.navbar{
+  @media screen and (max-width: 990px){
+    display: none;
+    z-index: 999;
+    position: absolute;
+    top: 60px;
+    right: -40%;
+    width: 40%;
+    margin: 0 auto;
+    background-color: rgb(49, 49, 49);
+  }
+}
+.navbar.active{
+  @media screen and (max-width: 990px){
+    display: block;
+    right: 0;
+  }
+}
+.menu{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  @media screen and (max-width: 990px){
+    flex-direction: column;
+  }
+  a{
+    transition: color 250ms ease-in-out;
+    @media screen and (max-width: 990px){
+      display: block;
+      font-size: 30px;
+      color: white;
+      text-align: center;
+    }
+    &:hover,
+    &:focus{
+      color:rgb(71, 73, 214);
+    }
+    &.active{
+      font-weight: 600;
+      color: rgb(71, 73, 214);
+    }
+  }
+}
+.menu_item{
+  @media screen and (max-width: 990px){
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+  }
+}
+.menu_item:not(:last-child){
+  margin-right: 30px;
+  @media screen and (max-width: 990px){
+    margin-right: 0;
+  }
+}
+.burger_icon{
+  display: none;
+  svg{
+    width: 20px;
+  }
+  @media screen and (max-width: 990px){
+    display: block;
+  }  
+}
+svg{
+  margin-top: 5px;
+  width: 30px;
+  height: 30px;
+  fill: black;
+}

@@ -1,0 +1,42 @@
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  height: 80px;
+  background-color: rgb(23, 23, 23);
+  @media screen and (min-width: 768px){
+    padding: 0 40px;
+  }
+  p{
+    font-size: 14px;
+    color: white;
+  }
+  ul{
+    display: flex;
+    li:not(:last-child){
+      margin-right: 15px;
+    }
+  }
+  svg{
+    fill: #A2A2A2;
+    transition: fill 250ms ease-in-out;
+    &:hover,
+    &:focus{
+      fill: white;
+    }
+  }
+}
+
+#twitter, #dribble{
+  width: 14px;
+  height: 14px;
+}
+#facebook{
+  width: 8.75px;
+  height: 14px;
+}
+#linkedin{
+  width: 12.25px;
+  height: 14px;
+}

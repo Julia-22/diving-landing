@@ -1,0 +1,107 @@
+.navigation{
+  padding: 20px 15px;
+  @media screen and (min-width:576px){
+    padding: 20px 30px;
+  }
+  @media screen and (min-width:768px){
+    padding: 0 40px 100px;
+  }
+}
+.navigation_box{
+  width: 100%;
+  height: 480px;
+  background-color: #fff;
+  @media screen and (min-width:576px){
+    width: 516px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width:768px){
+    width: 688px;
+    height: auto;
+  }
+  @media screen and (min-width: 991px){
+    display: flex;
+    align-items: center;
+    width: 911px;
+    height: 500px;
+  }
+  @media screen and (min-width: 1200px){
+    width: 1120px;
+  }
+}
+.map{
+  height: 250px;
+  @media screen and (min-width:768px){
+    height: 400px;
+  }
+  @media screen and (min-width: 991px){
+    height: 100%;
+    width: 530px;
+  }
+  @media screen and (min-width: 1200px){
+    width: 665px;
+  }
+}
+.navigation_description{
+  padding: 25px;
+  @media screen and (min-width:768px){
+    padding: 30px;
+  }
+  @media screen and (min-width: 991px){
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 381px;
+  }
+  @media screen and (min-width: 1200px){
+    width: 455px;
+  }
+  h3{
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    @media screen and (min-width:768px){
+      font-size: 30px;
+    }
+    @media screen and (min-width: 991px){
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+  }
+  p{
+    font-size: 16px;
+    font-style: normal;
+    line-height: 26px;
+    color: rgba(34, 34, 34, 0.8);
+    @media screen and (min-width:768px){
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @media screen and (min-width: 991px){
+      font-size: 22px;
+      line-height: 33px;
+    }
+  }
+  p.with_underline{
+    position: relative;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    @media screen and (min-width:768px){
+      padding-bottom: 15px;
+      margin-bottom: 10px;
+    }
+    @media screen and (min-width: 991px){
+      padding-bottom: 30px;
+      margin-bottom: 25px;
+    }
+  }
+    .with_underline::before{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    height: 0.5px;
+    width: 100%;
+    background-color: rgba(34, 34, 34, 0.3);
+  }
+}

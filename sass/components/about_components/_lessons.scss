@@ -1,0 +1,168 @@
+.lessons{
+  position: relative;
+  h2{
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    color: white;
+    text-align: end;
+    transform: translateX(-30px);
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+    &._active{
+      transform: translateX(0);
+      opacity: 1;
+    }
+    @media screen and (min-width:768px){
+      margin-bottom: 30px;
+      font-size: 34px;
+      line-height: 44px;
+    }
+    @media screen and (min-width: 991px){
+      margin-bottom: 50px;
+      font-size: 52px;
+      line-height: 65px;
+    }
+  }
+  &::after{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+    display: block;
+    width: calc(100% - 30px);
+    height: 0.5px;
+    background-color: #A2A2A2;
+  }
+}
+.lessons_container{
+  padding: 0 15px 40px;
+  @media screen and (min-width: 576px){
+    padding:0 30px 40px;
+    width: 576px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width:768px){
+    padding: 0 40px 80px;
+    width: 768px;
+  }
+  @media screen and (min-width: 991px){
+    display: flex;
+    width: 991px;
+  }
+  @media screen and (min-width: 1200px){
+    width: 1200px;
+  }
+}
+.lessons_title{
+  @media screen and (min-width: 991px){
+    width: 50%;
+    padding-right: 100px;
+  }
+  @media screen and (min-width: 1200px){
+    padding-right: 120px;
+  }
+}
+.social_networks{
+  display: flex;
+  align-items:center;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 500ms ease-in-out 200ms;
+  &._active{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  @media screen and (min-width:768px){
+    margin-bottom: 30px;
+  }
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    transition: all 250ms ease-in-out;
+    @media screen and (min-width:768px){
+      width: 50px;
+      height: 50px;
+    }
+    &:hover,
+    &:focus{
+      background-color: #fff;
+    }
+    &:hover svg,
+    &:focus svg{
+      fill: black;
+    }
+  }
+  li:not(:last-child){
+    margin-right: 10px;
+    @media screen and (min-width:768px){
+      margin-right: 20px;
+    }
+    @media screen and (min-width: 991px){
+      margin-right: 25px;
+    }
+  }
+  svg{
+    margin: 0;
+    height: 16px;
+    fill: rgba(255, 255, 255, 0.6);
+    transition: all 250ms ease-in-out;
+    @media screen and (min-width:768px){
+      height: 20px;
+    }
+  }
+}
+.lessons_description{
+  transform: translateX(30px);
+  opacity: 0;
+  transition: all 500ms ease-in-out 100ms;
+  &._active{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  @media screen and (min-width: 991px){
+    width: 50%;
+  }
+  p{
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    color: white;
+    @media screen and (min-width:768px){
+      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 27px;
+    }
+    @media screen and (min-width: 991px){
+      margin-bottom: 50px;
+    }
+  }
+  button{
+    width: 110px;
+    height: 35px;
+    font-size: 12px;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+    transition: all 250ms ease-in-out;
+    @media screen and (min-width:768px){
+      width: 160px;
+      height: 50px;
+      font-size: 14px;
+    }
+    &:hover,
+    &:focus{
+      background-color: #fff;
+      color: black;
+    }
+  }
+}

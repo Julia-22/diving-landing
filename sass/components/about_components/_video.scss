@@ -1,0 +1,132 @@
+.video{
+  position: relative;
+  padding: 0 15px 100px;
+}
+.video_img{
+  position:relative;
+  img{
+    display: block;
+    width: 100%;
+    height: 308px;
+    object-fit: cover;
+    @media screen and (min-width: 768px){
+      height: 588px;
+    }
+    @media screen and (min-width: 991px){
+      height: 720px;
+    }
+  }
+  button{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    background-color: #fff;
+    border:none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+	  transform: scale(1);
+	  animation: pulse 2s infinite;
+    @media screen and (min-width: 768px){
+      width: 88px;
+      height: 88px;
+    }
+  }  
+  svg{
+    height: 18px;
+    margin: 0;
+    @media screen and (min-width: 768px){
+      height: 28px;
+    }
+  }
+}
+.video_container{
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+  @media screen and (min-width: 576px){
+    width: 516px;
+    right: 50%;
+    transform: translateX(calc(50% + 30px));
+  }
+  @media screen and (min-width: 768px){
+    width: 688px;
+  }
+  @media screen and (min-width: 991px){
+    width: 911px;
+    bottom: 10px;
+  }
+  &._active{
+    transform: translateX(50%);
+    opacity: 1;
+  }
+}
+.video_description{
+  margin-left: auto;
+  height: 135px;
+  width: 75%;
+  padding: 25px;
+  background-color: #fff;
+  @media screen and (min-width: 576px){
+    width: 408px;
+  }
+  @media screen and (min-width: 768px){
+    width: 345px;
+    height: 210px;
+    padding: 40px;
+  }
+  @media screen and (min-width: 991px){
+    width: 45%;
+    height: auto;
+    padding: 45px;
+  }
+  h2{
+    margin-bottom: 5px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+    color: rgba(34, 34, 34, 0.9);
+    @media screen and (min-width: 768px){
+      margin-bottom: 10px;
+      font-size: 30px;
+      line-height: 40px;
+    }
+    @media screen and (min-width: 991px){
+      font-size: 32px;
+    }
+  }
+  p{
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(34, 34, 34, 0.8);
+    @media screen and (min-width: 768px){
+      font-size: 16px;
+      line-height: 27px;
+    }
+  }
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+	}
+
+	70% {
+		transform: scale(1.2);
+		box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+	}
+}
